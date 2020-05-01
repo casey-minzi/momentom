@@ -14,7 +14,7 @@ const saveName = (name) => {
     localStorage.setItem(USER_LS, name);
 };
 
-const handleSubmit = e => {
+function handleSubmit(e) {
     e.preventDefault();
     const userName = input.value;
     saveName(userName);
