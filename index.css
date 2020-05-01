@@ -1,5 +1,16 @@
 body {
-    color: #27496d;
+    color: #dae1e7;
+}
+
+input {
+    color: #dae1e7;
+    border: none;
+    background-color: transparent;
+    border-bottom: .1rem solid;
+}
+
+input:focus {
+    outline: none;
 }
 
 .form, .greeting {
@@ -8,4 +19,24 @@ body {
 
 .showing {
     display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 50;
+    }
+}
+
+.background {
+    position: absolute;
+    background-color: #142850;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: fadeIn 1s linear;
 }
