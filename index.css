@@ -26,6 +26,10 @@ input, input:focus {
     width: 350px;
 }
 
+button:focus {
+    outline: none;
+}
+
 .container {
     display: grid;
     justify-content: center;
