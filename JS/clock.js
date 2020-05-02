@@ -1,5 +1,5 @@
-const clockContainer = document.querySelector('.js-clock');
-const clockTitle = clockContainer.querySelector('.js-title');
+const clockContainer = document.querySelector('.js-clock'),
+    clockTitle = clockContainer.querySelector('.js-title');
 
 const normaliseTimeToken = (token) => {
     return token < 10 ? `0${token}` : token;

@@ -1,6 +1,7 @@
-const form = document.querySelector('.js-form');
-const input = form.querySelector('input');
-const greeting = document.querySelector('.greeting');
+const form = document.querySelector('.js-form'),
+    input = form.querySelector('input'),
+    greeting = document.querySelector('.greeting');
+
 const USER_LS = 'currentUser';
 const SHOWING_CN = 'showing';
 
@@ -10,7 +11,7 @@ const paintGreeting = name => {
     form.classList.remove(SHOWING_CN);
 };
 
-const saveName = (name) => {
+const saveName = name => {
     localStorage.setItem(USER_LS, name);
 };
 

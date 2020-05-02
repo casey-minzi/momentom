@@ -1,4 +1,5 @@
 const weather = document.querySelector('.js-weather');
+
 const COORDS = 'coords';
 const API_KEY = 'd659975cd487bfeaa275546a8bfd1923';
 
@@ -10,7 +11,7 @@ function getWeather(lat, lon) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
         .then(res => res.json())
         .then(json => {
-            const temp = json.main.temp;
+            const temp = Math.round(json.main.temp);
             const place = json.name;
             const country = json.sys.country;
             weather.innerText = `${temp}℃ @ ${place}, ${country}`;
@@ -18,8 +19,7 @@ function getWeather(lat, lon) {
 }
 
 function handleGeoSuccess(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+    const { latitude, longitude } = position.coords;
     const coordsObj = { latitude, longitude };
     saveCoords(coordsObj);
     getWeather(latitude, longitude);
