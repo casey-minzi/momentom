@@ -5,7 +5,7 @@ const USER_LS = 'currentUser';
 const SHOWING_CN = 'showing';
 
 const paintGreeting = name => {
-    greeting.innerText = `Hello ${name}`
+    greeting.innerText = `Hello, ${name}`
     greeting.classList.add(SHOWING_CN);
     form.classList.remove(SHOWING_CN);
 };

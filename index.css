@@ -1,24 +1,71 @@
 body {
-    color: #dae1e7;
+    color: #ffffff;
+    font-family: 'Abhaya Libre', serif;
+    margin-top: 22vh;
 }
 
-input {
-    color: #dae1e7;
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+}
+
+input, button, input::placeholder {
+    color: #ffffff;
     border: none;
     background-color: transparent;
-    border-bottom: .1rem solid;
+    font-family: 'Abhaya Libre', serif;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
-input:focus {
+input, input:focus {
+    border-bottom: .01rem solid #ffffff;
     outline: none;
+    width: 350px;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.clock {
+    font-size: 2rem;
+    opacity: 90%;
+}
+
+.title {
+    margin: 1.4rem;
+    letter-spacing: .5rem;
 }
 
 .form, .greeting {
     display: none;
+    margin-bottom: 2rem;
+    letter-spacing: .3rem;
+}
+
+.greeting.showing {
+    font-size: 4.2rem;
+    margin-top: 1.2rem;
 }
 
 .showing {
     display: block;
+    margin-top: 4rem;
+}
+
+.weather {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    font-size: 1rem;
+    letter-spacing: .2rem;
 }
 
 @keyframes fadeIn {
